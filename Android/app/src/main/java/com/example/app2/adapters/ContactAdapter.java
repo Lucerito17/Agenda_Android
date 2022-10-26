@@ -1,12 +1,12 @@
 package com.example.app2.adapters;
 
-import android.support.annotation.NonNull;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.app2.R;
 import com.example.app2.entities.Contact;
@@ -22,17 +22,16 @@ public class ContactAdapter extends RecyclerView.Adapter {
         this.data = data;
     }
 
-    @NonNull
     @Override
 
-    public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public RecyclerView.ViewHolder onCreateViewHolder( ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
         View itemView = inflater.inflate(R.layout.item_contact, parent, false);
         return new ContactAdapter.ContactViewHolder(itemView);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
+    public void onBindViewHolder( RecyclerView.ViewHolder holder, int position) {
         TextView tvName = holder.itemView.findViewById(R.id.tvName);
         tvName.setText(data.get(position).nombre + " " + data.get(position).apellido);
 
@@ -50,7 +49,7 @@ public class ContactAdapter extends RecyclerView.Adapter {
     }
 
     class ContactViewHolder extends RecyclerView.ViewHolder{
-        public ContactViewHolder(@NonNull View itemView){
+        public ContactViewHolder( View itemView){
             super(itemView);
         }
     }
