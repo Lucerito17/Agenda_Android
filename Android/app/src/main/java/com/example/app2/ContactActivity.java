@@ -31,21 +31,21 @@ public class ContactActivity extends AppCompatActivity {
         contact.id = 1;
         contact.apellido= "Cadelaro";
         contact.nombre = "Luka";
-        contact.numero = 943625120;
+        contact.numero = "943625120";
         contact.imgUrl = "https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-PNG-Photos.png";
         contactos.add(contact);
 
         contact2.id = 2;
         contact2.apellido= "Diamante";
         contact2.nombre = "Lila";
-        contact2.numero = 924625540;
+        contact2.numero = "924625540";
         contact2.imgUrl = "https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-Vector-PNG-Photos.png";
         contactos.add(contact2);
 
         contact3.id = 3;
         contact3.apellido= "Miraflores";
         contact3.nombre = "Pepi";
-        contact3.numero = 926525540;
+        contact3.numero = "926525540";
         contact3.imgUrl = "https://propami.com/assets/corals/images/avatars/avatar_9.png";
         contactos.add(contact3);
 

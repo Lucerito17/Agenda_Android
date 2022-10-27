@@ -8,6 +8,6 @@ public class Contact {
     public String nombre;
     @SerializedName("lastname")
     public String apellido;
-    public int numero;
+    public String numero;
     public String imgUrl;
 }

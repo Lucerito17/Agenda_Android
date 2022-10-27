@@ -26,21 +26,21 @@ public class ContactAdapter extends RecyclerView.Adapter {
 
     public RecyclerView.ViewHolder onCreateViewHolder( ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-        View itemView = inflater.inflate(R.layout.item_contact, parent, false);
+        View itemView = inflater.inflate(R.layout.item_lista, parent, false);
         return new ContactAdapter.ContactViewHolder(itemView);
     }
 
     @Override
     public void onBindViewHolder( RecyclerView.ViewHolder holder, int position) {
-        TextView tvName = holder.itemView.findViewById(R.id.tvName);
-        tvName.setText(data.get(position).nombre + " " + data.get(position).apellido);
+        TextView tvName = holder.itemView.findViewById(R.id.tvNombre12);
+        tvName.setText(data.get(position).nombre + "");
 
-        TextView tvNumber = holder.itemView.findViewById(R.id.tvNumber);
-        tvNumber.setText(data.get(position).numero+ "");
+        TextView tvNumber = holder.itemView.findViewById(R.id.tvApellido);
+        tvNumber.setText(data.get(position).apellido + "");
 
-        ImageView ivImage = holder.itemView.findViewById(R.id.ivImage);
-        //ivImage.setImageResource(R.drawable.uno);
-        Picasso.get().load(data.get(position).imgUrl).into(ivImage);
+        //ImageView ivImage = holder.itemView.findViewById(R.id.ivImage);
+        //idfsvImage.setImageResource(R.drawable.uno);
+        //Picasso.get().load(data.get(position).imgUrl).into(ivImage);
     }
 
     @Override
